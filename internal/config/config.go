@@ -10,15 +10,17 @@ import (
 
 type (
 	Config struct {
-		API API `mapstructure:"api"`
-	}
-
-	API struct {
-		Port string `mapstructure:"port"`
+		API      API      `mapstructure:"api"`
+		Services Services `mapstructure:"services"`
+		Logger   Logger   `mapstructure:"logger"`
 	}
 
 	Logger struct {
 		Level string `mapstructure:"level"`
+	}
+
+	API struct {
+		Port string `mapstructure:"port"`
 	}
 
 	Services struct {
