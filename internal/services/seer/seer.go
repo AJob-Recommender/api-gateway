@@ -2,6 +2,7 @@ package seer
 
 import (
 	"context"
+	"fmt"
 	"github.com/AJob-Recommender/base-api/internal/config"
 	"github.com/AJob-Recommender/base-api/pkg/client"
 	"go.uber.org/zap"
@@ -9,7 +10,7 @@ import (
 )
 
 const (
-	endpoint = ""
+	endpoint = "/predict"
 )
 
 type Seer struct {
@@ -40,12 +41,13 @@ func NewSeer(config *config.Config, log *zap.SugaredLogger) *Seer {
 	}
 }
 
-func (s Seer) Predict(ctx context.Context, req Request) (res Response, err error) {
+func (s Seer) Predict(ctx context.Context, req *Request) (res Response, err error) {
 	request := client.Request{
 		Method: http.MethodPost,
-		URL:    endpoint,
+		URL:    s.Config.Services.Seer.URL + endpoint,
 		Body:   req,
 	}
+	fmt.Println("request", request.Body)
 
 	if _, err = s.Client.DoWithRetry(ctx, request, &res); err != nil {
 		return res, err
