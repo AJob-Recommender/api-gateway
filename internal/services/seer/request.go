@@ -15,6 +15,8 @@ type Request struct {
 	NetworkSkills        NetworkSkills        `json:"network_skills"`
 	HardwareSkills       HardwareSkills       `json:"hardware_skills"`
 	OS                   OS                   `json:"os"`
+	Education            Education            `json:"education"`
+	Experience           Experience           `json:"experience"`
 }
 
 type ProgrammingLanguages struct {
@@ -216,4 +218,24 @@ type OS struct {
 	Linux   int `json:"linux"`
 	Vmware  int `json:"vmware"`
 	Windows int `json:"windows"`
+}
+
+type Education struct {
+	BachelorComputer int `json:"bachelor_computer"`
+	MasterComputer   int `json:"master_computer"`
+	PHDComputer      int `json:"phd_computer"`
+	OtherMajor       int `json:"other_major"`
+}
+
+type Experience struct {
+	MobileDeveloper       int `json:"mobile_developer"`
+	DataScientist         int `json:"data_scientist"`
+	UIUXDesigner          int `json:"ui_ux_designer"`
+	NetworkEngineer       int `json:"network_engineer"`
+	DataEngineer          int `json:"data_engineer"`
+	SoftwareEngineer      int `json:"software_engineer"`
+	FrontendDeveloper     int `json:"frontend_developer"`
+	HardwareEngineer      int `json:"hardware_engineer"`
+	DevopsEngineer        int `json:"devops_engineer"`
+	DatabaseAdministrator int `json:"database_administrator"`
 }
