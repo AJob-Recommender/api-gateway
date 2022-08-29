@@ -14,7 +14,6 @@ type Request struct {
 	AIFrameworks         AIFrameworks         `json:"ai_frameworks"`
 	NetworkSkills        NetworkSkills        `json:"network_skills"`
 	HardwareSkills       HardwareSkills       `json:"hardware_skills"`
-	OS                   OS                   `json:"os"`
 	Education            Education            `json:"education"`
 	Experience           Experience           `json:"experience"`
 }
@@ -24,8 +23,6 @@ type ProgrammingLanguages struct {
 	Kotlin     int `json:"kotlin"`
 	XML        int `json:"xml"`
 	Swift      int `json:"swift"`
-	Android    int `json:"android"`
-	IOS        int `json:"ios"`
 	R          int `json:"r"`
 	Python     int `json:"python"`
 	PHP        int `json:"php"`
@@ -73,7 +70,6 @@ type FrontendFrameworks struct {
 	Angular   int `json:"angular"`
 	Redux     int `json:"redux"`
 	Ajax      int `json:"ajax"`
-	JQuery    int `json:"jquery"`
 	BootStrap int `json:"bootstrap"`
 }
 
@@ -182,8 +178,6 @@ type NetworkSkills struct {
 	Switching             int `json:"switching"`
 	NetworkSecurity       int `json:"network_security"`
 	LanWan                int `json:"lan_wan"`
-	Hacking               int `json:"hacking"`
-	CyberSecurity         int `json:"cyber_security"`
 	PenetrationTesting    int `json:"penetration_testing"`
 	NetworkAdministration int `json:"network_administration"`
 	IP                    int `json:"ip"`
@@ -214,12 +208,6 @@ type HardwareSkills struct {
 	Proteus               int `json:"proteus"`
 }
 
-type OS struct {
-	Linux   int `json:"linux"`
-	Vmware  int `json:"vmware"`
-	Windows int `json:"windows"`
-}
-
 type Education struct {
 	BachelorComputer int `json:"bachelor_computer"`
 	MasterComputer   int `json:"master_computer"`
@@ -228,7 +216,6 @@ type Education struct {
 }
 
 type Experience struct {
-	MobileDeveloper       int `json:"mobile_developer"`
 	DataScientist         int `json:"data_scientist"`
 	UIUXDesigner          int `json:"ui_ux_designer"`
 	NetworkEngineer       int `json:"network_engineer"`
