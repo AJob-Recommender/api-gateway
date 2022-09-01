@@ -25,7 +25,7 @@ func NewHandler(cfg *config.Config, log *zap.SugaredLogger, seerClient *seer.See
 func (h *Handler) Predict(ctx *fiber.Ctx) error {
 	req := new(seer.Request)
 
-	if err := ctx.BodyParser(req); err != nil {
+	if err := ctx.BodyParser(&req); err != nil {
 		h.Log.Warn("request body is not valid", zap.Error(err), zap.Any("request", string(ctx.Body())))
 
 		return errors.New("request is not valid")
