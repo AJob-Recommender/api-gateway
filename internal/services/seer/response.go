@@ -1,5 +1,10 @@
 package seer
 
 type Response struct {
-	Job string `json:"job"`
+	Item []Item `json:"each_job"`
+}
+
+type Item struct {
+	Job        string  `json:"job"`
+	Confidence float64 `json:"confidence"`
 }
