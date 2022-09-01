@@ -1,7 +1,7 @@
 package seer
 
 type Response struct {
-	Item []Item `json:"each_job"`
+	Results []Item `json:"results"`
 }
 
 type Item struct {
