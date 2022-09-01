@@ -1,6 +1,8 @@
 package request
 
 type Request struct {
+	FullName             string               `json:"full_name"`
+	About                string               `json:"about"`
 	ProgrammingLanguages ProgrammingLanguages `json:"programming_languages"`
 	BackendFrameworks    BackendFrameworks    `json:"backend_frameworks"`
 	Devops               Devops               `json:"devops"`
