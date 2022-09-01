@@ -5,7 +5,7 @@ logger:
 services:
   seer:
     timeout: 5s
-    max_retry: 1
+    max_retry: 2
     max_idle_cons_per_host: 1
     max_idle_cons: 1
     max_cons_per_host: 1
